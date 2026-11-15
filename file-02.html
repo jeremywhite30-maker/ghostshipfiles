@@ -5,22 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>File #2 — What If Your Navy Ship Lost All Power? | Ghost Ship Files</title>
 <meta name="description" content="Every light, every pump, the steering — gone. A storm is 14 miles out. Hosted by a Navy Veteran and Captain Eight.">
+<link rel="canonical" href="https://jeremywhite30-maker.github.io/ghostshipfiles/file-02.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="File #2 — What If Your Navy Ship Lost All Power? | Ghost Ship Files">
 <meta property="og:description" content="Every light, every pump, the steering — gone. A storm is 14 miles out. Hosted by a Navy Veteran and Captain Eight.">
-<meta property="og:image" content="img/og.jpg">
+<meta property="og:image" content="https://jeremywhite30-maker.github.io/ghostshipfiles/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="File #2 — What If Your Navy Ship Lost All Power? | Ghost Ship Files">
 <meta name="twitter:description" content="Every light, every pump, the steering — gone. A storm is 14 miles out. Hosted by a Navy Veteran and Captain Eight.">
-<meta name="twitter:image" content="img/og.jpg">
+<meta name="twitter:image" content="https://jeremywhite30-maker.github.io/ghostshipfiles/img/og.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Limelight&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poiret+One&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/v2b.css">
 </head>
-<body>
-<div class="draft" title="Draft only — not published">Draft</div>
+<body class="page-file">
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
@@ -32,12 +34,14 @@
     <nav class="nav-links">
       <a class="" href="index.html">Home</a>
       <a class=" on" href="files.html">Files</a>
+      <a class="" href="famous-ghost-ships.html">Ghost Ships</a>
       <a class="" href="gear.html">Gear</a>
       <a class="" href="about.html">About</a>
       <a class="" href="disclosure.html">Disclosure</a>
       <a class="cta-nav" href="https://www.youtube.com/@GhostShipFilesTV?sub_confirmation=1">Subscribe</a>
     </nav>
   </div>
+  <div class="lights" aria-hidden="true"></div>
 </header>
 
 <main>
@@ -45,6 +49,18 @@
     <div class="wrap">
       <p class="kicker">File #2 · Long</p>
       <h1>What If Your Navy Ship Lost All Power?</h1>
+      <section class="dossier" aria-labelledby="ds-h">
+        <span class="stamp" aria-hidden="true">WHAT-IF</span>
+        <h2 id="ds-h">The dossier</h2>
+        <div class="ds-grid">
+          <div><h3>Key facts</h3><dl class="facts"><div><dt>Type</dt><dd>What-if scenario, not a single real wreck</dd></div><div><dt>Ship</dt><dd>A gas-turbine Navy ship, described in general, public terms</dd></div><div><dt>Based on</dt><dd>How shipboard power, pumps and steering work, plus Jeremy&#x27;s 8 years as a Navy Gas Turbine Systems Technician</dd></div></dl>
+            <h3>Where it happened</h3><div class="map-wrap"><div class="no-map">No map for this File: it's a what-if scenario at sea, not a real wreck site.</div></div></div>
+          <div><h3>Timeline</h3><ol class="timeline"><li><b>Minute 0</b>Every light, every pump and the steering go dark.</li><li><b>The threat</b>A storm is 14 miles out.</li><li><b>The fight</b>Engineers work the blacked-out ship minute by minute, waiting for the sound of power coming back.</li></ol>
+            <h3>Sources</h3><ul class="ds-sources"><li>General public references on gas-turbine warship engineering</li><li>Jeremy&#x27;s own service as a Gas Turbine Systems Technician</li></ul></div>
+        </div>
+        
+      </section>
+      <p class="kicker watch-label">Watch the File</p>
             <div class="embed">
         <iframe src="https://www.youtube-nocookie.com/embed/AA1GfmHG9Tc" title="What If Your Navy Ship Lost All Power?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
@@ -65,9 +81,31 @@
       </div>
     </div>
   </article>
+
+  <section class="signup" id="signup" aria-labelledby="su-h-file-02">
+    <div class="wrap">
+      <div class="signup-card">
+        <span class="su-tag">The Ghost Ship Files dispatch</span>
+        <h2 id="su-h-file-02">Get the next File in your inbox</h2>
+        <p>One short email when a new File drops, with the story and its gear picks. No spam.</p>
+        <!-- TODO(email provider): there is NO backend yet and nothing is sent or stored.
+             Jeremy must approve a free provider first (Buttondown, MailerLite or Formspree).
+             Then: set action="PROVIDER_ENDPOINT", change data-provider="TODO" to the provider name,
+             and update privacy.html to mention the email list. Until then js/gsf.js shows a "coming soon" note. -->
+        <form class="signup-form" action="#signup" method="post" data-provider="TODO">
+          <label class="sr-only" for="su-email-file-02">Email address</label>
+          <input id="su-email-file-02" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit">Notify me</button>
+        </form>
+        <p class="signup-msg" role="status" aria-live="polite" hidden></p>
+        <p class="fine">The email list is coming soon. Until then, the fastest way to get new Files is <a href="https://www.youtube.com/@GhostShipFilesTV?sub_confirmation=1" rel="noopener">subscribing on YouTube</a>.</p>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="site">
   <div class="wrap">
+    <picture class="jdw-stamp"><source srcset="img/jdw-badge-128.webp" type="image/webp"><img src="img/jdw-badge-128.png" width="64" height="64" alt="JDW anchor badge"></picture>
     <div>
       <div>Ghost Ship Files · hosted by a Navy Veteran and Captain Eight.</div>
       <div>As an Amazon Associate I earn from qualifying purchases. Each File page uses that File’s own tracking tag (for example File #11 uses <code>gsffile22-20</code>).</div>
@@ -77,11 +115,13 @@
     <div class="social">
       <a href="index.html">Home</a>
       <a href="files.html">Files</a>
+      <a href="famous-ghost-ships.html">Famous Ghost Ships</a>
       <a href="gear.html">Gear</a>
       <a href="about.html">About</a>
       <a href="disclosure.html">Disclosure &amp; Privacy</a>
     </div>
   </div>
 </footer>
+<script src="gsf.js" defer></script>
 </body>
 </html>
