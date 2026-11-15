@@ -186,3 +186,11 @@
   }
   .nav-toggle:checked ~ .nav-links { display: grid !important; gap: .2rem; }
 }
+
+
+/* ---------- Gear: Creator tools card (vidIQ affiliate) ---------- */
+.page-gear .picks.picks-single { grid-template-columns: 1fr; max-width: 34rem; }
+.page-gear .picks.picks-single .pick { transform: rotate(-.4deg); }
+.page-gear .picks.picks-single .pick:hover { transform: translateY(-4px) rotate(0); }
+.page-gear .pick p { margin: .45rem 0 0; color: #3d3020; font-size: .96rem; line-height: 1.45; }
+.page-gear .pick .fine { font-size: .88rem; color: #5a4a32; margin-top: .55rem; }
