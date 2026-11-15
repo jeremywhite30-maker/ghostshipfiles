@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeremywhite30-maker.github.io/ghostshipfiles/sitemap.xml
