@@ -1,0 +1,188 @@
+/* Ghost Ship Files v2b additions: Gazette (This Day + Newly Found), signup, Famous Ghost Ships list, File dossiers.
+   Same boardwalk/jazz palette as style.css. All motion is covered by the reduced-motion block in style.css. */
+
+/* ---------- Boardwalk Gazette (home) ---------- */
+.gazette { padding: 2.6rem 0 1rem; }
+.gazette .sec-head { margin-bottom: 1.2rem; }
+.gz-grid { display: grid; gap: 1.6rem; }
+.newsbox {
+  position: relative; color: #1b140b;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.025) 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #f4ead0, #e6d6aa);
+  border: 3px solid #1b140b; border-radius: 4px;
+  box-shadow: 0 0 0 4px var(--brass), 0 0 0 6px #000, var(--shadow);
+  padding: 0 1.2rem 1.2rem;
+}
+.newsbox::before { /* coin-op top of a boardwalk newspaper box */
+  content: ""; display: block; height: 10px; margin: 0 -1.2rem 0;
+  background: repeating-linear-gradient(90deg, #b3181e 0 18px, #8a1016 18px 36px);
+  border-bottom: 2px solid #1b140b;
+}
+.nb-mast { text-align: center; border-bottom: 3px double #1b140b; padding: .7rem 0 .55rem; margin-bottom: .8rem; }
+.nb-mast .nb-kicker { font-family: var(--cond); letter-spacing: .28em; font-size: .95rem; color: #8a1016; text-transform: uppercase; display: block; }
+.nb-mast h2 {
+  font-family: "Playfair Display", Georgia, serif; font-weight: 900; color: #140e07; margin: .1rem 0 .1rem;
+  -webkit-text-stroke: 0; text-shadow: none; font-size: clamp(1.45rem, 3.4vw, 2.05rem); letter-spacing: .01em;
+}
+.nb-mast .nb-line { font-family: var(--thin); font-size: .95rem; color: #3d3020; display: flex; justify-content: space-between; gap: .6rem; border-top: 1px solid #1b140b; margin-top: .35rem; padding-top: .3rem; }
+.newsbox h3 { color: #140e07; font-family: "Playfair Display", Georgia, serif; font-size: 1.28rem; margin: .1rem 0 .35rem; }
+.newsbox p { color: #2c2216; }
+.newsbox a { color: #8a1016; }
+.newsbox a:hover { color: #b3181e; }
+.wd-date { font-family: var(--cond); font-size: 1.1rem; letter-spacing: .14em; text-transform: uppercase; margin: 0; color: #8a1016; }
+.wd-date b { background: #140e07; color: var(--yellow); padding: 0 .45rem; margin-left: .25rem; font-weight: 400; }
+.wd-entry + .wd-entry { border-top: 1px dashed #1b140b; margin-top: .9rem; padding-top: .8rem; }
+.wd-note { font-family: var(--thin); font-size: .98rem; background: rgba(0,0,0,.06); padding: .35rem .6rem; border-left: 3px solid #8a1016; }
+.wd-src { font-size: .9rem; margin: .3rem 0 0; }
+.wd-week { margin-top: 1rem; border-top: 3px double #1b140b; padding-top: .6rem; }
+.wd-week h4 { font-family: var(--cond); font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: #8a1016; margin: 0 0 .4rem; font-size: 1.05rem; }
+.wd-week ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.wd-week li { font-size: .95rem; color: #2c2216; }
+.wd-week li b { font-family: var(--cond); font-weight: 400; letter-spacing: .08em; color: #140e07; margin-right: .3rem; }
+.nb-foot { font-size: .82rem; color: #5a4a32 !important; margin: .9rem 0 0; border-top: 1px solid rgba(0,0,0,.3); padding-top: .5rem; }
+
+.found-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.found-list li { border-top: 1px dashed #1b140b; padding-top: .7rem; }
+.found-list li:first-child { border-top: 0; padding-top: 0; }
+.found-list .f-date { font-family: var(--cond); letter-spacing: .14em; color: #8a1016; font-size: 1rem; text-transform: uppercase; }
+.found-list h4 { font-family: "Playfair Display", Georgia, serif; font-size: 1.06rem; margin: .1rem 0 .2rem; color: #140e07; }
+.found-list p { margin: 0 0 .2rem; font-size: .95rem; }
+.lsotm {
+  position: relative; background: #140e07; color: var(--cream); padding: .9rem 1rem .9rem; margin: 0 0 1rem;
+  border: 2px solid var(--brass); outline: 2px dashed rgba(255,212,0,.5); outline-offset: -7px;
+}
+.lsotm .tag { font-family: var(--cond); letter-spacing: .24em; color: var(--yellow); font-size: 1rem; text-transform: uppercase; display: block; }
+.lsotm h3 { color: var(--yellow) !important; margin: .15rem 0 .3rem; font-size: 1.32rem !important; }
+.lsotm p { color: var(--cream) !important; margin: 0 0 .35rem; font-size: .98rem; }
+.lsotm a { color: var(--yellow) !important; }
+
+/* ---------- Famous Ghost Ships banner (home) ---------- */
+.famous-banner { padding: 1.4rem 0 .6rem; }
+.fb-card {
+  display: grid; gap: 1rem; align-items: center; text-decoration: none; color: var(--cream);
+  background: radial-gradient(70% 120% at 0% 50%, rgba(107,15,31,.55), transparent 70%), linear-gradient(180deg, #0d1a2c, #07101c);
+  border: 2px solid var(--brass); border-radius: 8px; padding: 1.3rem 1.4rem; box-shadow: var(--shadow), inset 0 0 0 4px #000, inset 0 0 0 5px rgba(201,162,74,.4);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.fb-card:hover { transform: translateY(-3px); color: var(--cream); box-shadow: var(--shadow), 0 0 26px rgba(255,212,0,.22), inset 0 0 0 4px #000, inset 0 0 0 5px rgba(201,162,74,.4); }
+.fb-card h2 { margin: 0 0 .3rem; }
+.fb-card p { margin: 0; color: var(--muted); }
+.fb-cta { font-family: var(--cond); font-size: 1.25rem; letter-spacing: .14em; text-transform: uppercase; background: var(--yellow); color: #000; padding: .55rem 1.1rem; border-radius: 3px; justify-self: start; white-space: nowrap; }
+
+/* ---------- Email signup ---------- */
+.signup { padding: 2rem 0 1.2rem; }
+.signup-card {
+  position: relative; max-width: 760px; margin: 0 auto; text-align: center; color: #1b140b;
+  background: linear-gradient(180deg, #f2e6c6, #e2cf9f); border-radius: 8px; padding: 1.6rem 1.4rem 1.3rem;
+  box-shadow: 0 0 0 3px #1b140b, 0 0 0 6px var(--brass), 0 0 0 8px #000, var(--shadow);
+}
+.signup-card .su-tag { display: inline-block; font-family: var(--cond); letter-spacing: .24em; text-transform: uppercase; background: #b3181e; color: #ffe9a8; padding: .2rem .8rem; border: 2px dashed rgba(255,233,168,.7); font-size: .95rem; }
+.signup-card h2 { margin: .5rem 0 .3rem; }
+.signup-card p { color: #3d3020; margin: 0 0 .8rem; }
+.signup-form { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+.signup-form input[type=email] {
+  flex: 1 1 240px; max-width: 380px; font: inherit; padding: .7rem .9rem; border-radius: 3px; border: 2px solid #1b140b; background: #fffaf0; color: #140e07;
+}
+.signup-form input[type=email]:focus { outline: 3px solid var(--teal); outline-offset: 2px; }
+.signup-form button { cursor: pointer; font-family: var(--cond); font-size: 1.15rem; letter-spacing: .12em; text-transform: uppercase; border: 0; border-radius: 3px; padding: .6rem 1.2rem; background: #140e07; color: var(--yellow); box-shadow: 0 0 0 2px var(--yellow) inset; }
+.signup-form button:hover { background: #000; }
+.signup-msg { margin: .8rem 0 0 !important; font-weight: 600; color: #140e07 !important; background: rgba(255,212,0,.35); padding: .5rem .7rem; border-radius: 3px; }
+.signup-msg a { color: #8a1016; }
+.signup-card .fine { font-size: .85rem; margin: .8rem 0 0; color: #5a4a32; }
+.signup-card .fine a { color: #8a1016; font-weight: 600; }
+
+/* ---------- Famous Ghost Ships page ---------- */
+.page-famous article.file > .wrap { max-width: 960px; }
+.legend-key { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; margin: .4rem 0 1.4rem; color: var(--muted); font-size: .95rem; }
+.case-tag { display: inline-block; font-family: var(--cond); font-size: .95rem; letter-spacing: .18em; text-transform: uppercase; padding: .1rem .55rem; border-radius: 2px; vertical-align: middle; }
+.case-tag.doc { background: var(--teal); color: #031512; }
+.case-tag.leg { background: var(--velvet); color: #ffe9a8; border: 1px solid #ffe9a8; }
+.case-tag.gsf { background: var(--yellow); color: #000; }
+.toc { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1.6rem; padding: 0; list-style: none; }
+.toc a { display: inline-block; font-family: var(--cond); letter-spacing: .1em; font-size: 1rem; padding: .25rem .7rem; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--cream); background: rgba(0,0,0,.35); }
+.toc a:hover { color: var(--yellow); border-color: var(--yellow); }
+.gs-list { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: 1.1rem; counter-reset: gs; }
+.gs-item {
+  position: relative; counter-increment: gs; padding: 1.1rem 1.2rem 1rem 4.2rem; border-radius: 6px;
+  background: linear-gradient(180deg, rgba(18,38,63,.75), rgba(7,16,28,.85)); border: 1px solid var(--line);
+  box-shadow: 0 10px 26px rgba(0,0,0,.4);
+}
+.gs-item::before {
+  content: counter(gs); position: absolute; left: .9rem; top: 1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  font-family: var(--cond); font-size: 1.5rem; color: #000; background: var(--yellow); border-radius: 50%; box-shadow: 0 0 0 3px #000, 0 0 0 5px var(--brass);
+}
+.gs-item.legend { background: linear-gradient(180deg, rgba(60,10,20,.6), rgba(7,16,28,.85)); }
+.gs-item h3 { font-size: 1.3rem; color: var(--cream); margin: 0 0 .2rem; }
+.gs-item h3 a { color: inherit; }
+.gs-meta { font-family: var(--cond); letter-spacing: .12em; text-transform: uppercase; color: var(--teal); font-size: 1rem; margin: 0 0 .45rem; }
+.gs-item p { margin: 0 0 .5rem; }
+.gs-src { font-size: .88rem; color: var(--muted); margin: .4rem 0 0 !important; border-top: 1px dashed var(--line); padding-top: .4rem; }
+.gs-file { font-family: var(--cond); letter-spacing: .12em; font-size: 1.05rem; text-transform: uppercase; }
+
+/* ---------- File dossier ---------- */
+.dossier {
+  position: relative; margin: .4rem 0 2rem; color: #1b140b; border-radius: 4px;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.03) 0 1px, transparent 1px 26px), linear-gradient(180deg, #f1e4c2, #e0cc98);
+  box-shadow: 0 0 0 3px #1b140b, 0 0 0 6px var(--brass), 0 0 0 8px #000, var(--shadow);
+  padding: 1.3rem 1.2rem 1.1rem;
+}
+.dossier::before { /* manila folder tab */
+  content: "CASE FILE"; position: absolute; top: -1.55rem; left: 1rem; font-family: var(--cond); letter-spacing: .22em; font-size: .95rem;
+  background: #e0cc98; color: #8a1016; padding: .2rem .9rem 0; border: 3px solid #1b140b; border-bottom: 0; border-radius: 6px 6px 0 0;
+}
+.dossier .stamp {
+  position: absolute; top: .9rem; right: 1rem; transform: rotate(8deg); font-family: var(--cond); font-size: 1.2rem; letter-spacing: .18em;
+  color: #b3181e; border: 3px solid #b3181e; padding: .05rem .55rem; border-radius: 4px; opacity: .8;
+}
+.dossier h2 { margin: 0 0 .6rem; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+.dossier h3 { color: #140e07; font-size: 1.15rem; margin: 1.1rem 0 .5rem; font-family: var(--cond); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; border-bottom: 2px solid #1b140b; padding-bottom: .15rem; }
+.dossier p, .dossier li { color: #2c2216; }
+.dossier a { color: #8a1016; }
+.ds-grid { display: grid; gap: 1.2rem; }
+.facts { margin: 0; display: grid; gap: 0; border: 2px solid #1b140b; background: rgba(255,250,236,.6); }
+.facts div { display: grid; grid-template-columns: 8.2rem 1fr; border-top: 1px solid rgba(27,20,11,.35); }
+.facts div:first-child { border-top: 0; }
+.facts dt { font-family: var(--cond); letter-spacing: .12em; text-transform: uppercase; font-size: .98rem; background: #140e07; color: var(--yellow); padding: .35rem .6rem; }
+.facts dd { margin: 0; padding: .35rem .7rem; font-size: .97rem; color: #1b140b; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1.2rem; border-left: 3px solid #1b140b; }
+.timeline li { position: relative; margin: 0 0 .7rem; padding-left: .4rem; font-size: .97rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.72rem; top: .35rem; width: .8rem; height: .8rem; background: var(--yellow); border: 2px solid #1b140b; border-radius: 50%; }
+.timeline b { display: block; font-family: var(--cond); letter-spacing: .12em; font-weight: 400; color: #8a1016; font-size: 1rem; }
+.map-wrap { border: 3px solid #1b140b; background: #0b1a2e; position: relative; }
+.map-wrap iframe { display: block; width: 100%; height: 300px; border: 0; }
+.map-cap { font-size: .86rem; margin: .35rem 0 0; color: #3d3020 !important; }
+.no-map { display: grid; place-items: center; text-align: center; min-height: 180px; padding: 1rem; background: radial-gradient(circle at 50% 45%, #12263f, #07101c); color: var(--cream); font-family: var(--cond); letter-spacing: .12em; font-size: 1.2rem; }
+.no-map span { display: block; font-family: "Source Serif 4", Georgia, serif; letter-spacing: 0; font-size: .95rem; color: var(--muted); margin-top: .3rem; }
+.ds-sources { margin: 0; padding-left: 1.2rem; font-size: .95rem; }
+.ds-sources li { margin-bottom: .25rem; }
+.ds-note { font-size: .85rem; margin: .9rem 0 0; color: #5a4a32 !important; }
+.watch-label { margin: 0 0 .2rem; }
+
+@media (min-width: 720px) {
+  .gz-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  .fb-card { grid-template-columns: 1fr auto; }
+  .fb-cta { justify-self: end; }
+  .ds-grid { grid-template-columns: 1.05fr 1fr; align-items: start; }
+}
+@media (max-width: 719px) {
+  .gs-item { padding: 1rem .9rem .9rem 3.6rem; }
+  .gs-item::before { left: .6rem; width: 2.2rem; height: 2.2rem; font-size: 1.3rem; }
+  .facts div { grid-template-columns: 6.6rem 1fr; }
+  .dossier { margin-inline: 6px; }
+  .dossier .stamp { position: static; display: inline-block; margin-bottom: .5rem; }
+  .newsbox, .signup-card { margin-inline: 6px; }
+}
+@media (prefers-reduced-motion: reduce) { .fb-card:hover { transform: none !important; } }
+
+/* ---------- Nav: 7 links now, so keep the Menu button up to 1019px (tablets) ---------- */
+.nav-links a { white-space: nowrap; }
+@media (min-width: 720px) and (max-width: 1019px) {
+  .menu-btn { display: inline-block !important; }
+  .nav-links {
+    display: none !important; position: absolute !important; right: 0; top: calc(100% + .6rem);
+    background: linear-gradient(180deg, #160a0e, #0b0608) !important; border: 2px solid var(--brass) !important;
+    border-radius: 6px; padding: .6rem !important; min-width: 14rem !important; box-shadow: var(--shadow) !important; z-index: 45;
+  }
+  .nav-toggle:checked ~ .nav-links { display: grid !important; gap: .2rem; }
+}
